@@ -25,9 +25,15 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
+              "src/theme.less",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "phu-kien-xinh"
+    }
+  },
+  "defaultProject": "phu-kien-xinh",
+  "cli": {
+    "analytics": "1cd64b3d-784b-4cf4-946a-9c59a2c176a4"
+  }
 }
