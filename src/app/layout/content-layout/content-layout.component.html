@@ -1,3 +1,31 @@
-<p>
-  content-layout works!
-</p>
+ <nav class="navbar">
+   <div class="container nav">
+     <a routerLink="/home" class="d-flex logo">
+       <img src="" alt="logo">
+     </a>
+     <ul class="nav-list" [ngClass]="{'nav-hide': isHide, 'nav-active': !isHide}">
+       <li><a routerLink="/home">Trang chủ</a></li>
+       <li><a routerLink="/account/membership">Dịch vụ</a></li>
+       <li><a routerLink="/home">Cộng đồng</a></li>
+       <ng-container *ngIf="user; else elseTemplate">
+         <li class="nav-item" nz-button nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomRight">
+           {{ user.preferred_username }} <i class="ml-2" nz-icon nzType="down" nzTheme="outline"></i></li>
+         <nz-dropdown-menu #menu="nzDropdownMenu">
+           <ul nz-menu>
+             <li nz-menu-item><a routerLink="/authentication/logout" [state]="{ local: true }">
+                 <i class="mr-3" nz-icon nzType="logout" nzTheme="outline"></i>Đăng xuất</a></li>
+           </ul>
+         </nz-dropdown-menu>
+
+       </ng-container>
+       <ng-template #elseTemplate>
+         <li class=" nav-link"><a routerLink="/auth/login">Đăng nhập</a></li>
+       </ng-template>
+     </ul>
+     <div class="burger" (click)="isHide = !isHide">
+       <div class="line1"></div>
+       <div class="line2"></div>
+       <div class="line3"></div>
+     </div>
+   </div>
+ </nav>
