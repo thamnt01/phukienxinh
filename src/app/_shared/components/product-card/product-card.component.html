@@ -1,0 +1,32 @@
+<div class="container">
+  <div *ngFor="let item of items">
+    <div class="text-center mb-5">
+      <h2> {{item.title}} </h2>
+      <p>{{ item.textLead }}</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 border-1 ">
+      <div class="col mb-3 mb-lg-0" *ngFor="let card of item.cards">
+        <div class="card">
+          <!-- [ngStyle]="{'background-image': card.image}" -->
+          <div class="thumb">
+            <div>
+              <img src="{{ card.image }}" alt="">
+              <img class="d-none" src="{{ card.imageHover }}" alt="">
+            </div>
+          </div>
+          <div class="text-center">
+            <h2 class="text-center">{{ card.name }} - {{ card.code }}</h2>
+            <p>{{ card.price }}</p>
+            <product-option></product-option>
+            <button>Mua ngay</button>
+            <!-- <button><i nz-icon nzType="plus" nzTheme="outline"></i><i class="font-size-18" nz-icon nzType="shopping-cart"
+              nzTheme="outline"></i></button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center my-5">
+      <a class="text-black-50" href="">Xem thêm sản phẩm khác</a>
+    </div>
+  </div>
+</div>

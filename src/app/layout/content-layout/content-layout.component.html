@@ -1,12 +1,14 @@
  <nav class="navbar">
    <div class="container nav">
-     <a routerLink="/home" class="d-flex logo">
-       <img src="" alt="logo">
+     <a routerLink="/content-layout" class="d-flex logo">
+       <img src="/assets/images/logonotext.png" alt="logo">
+       <h2>Phụ kiện xinh</h2>
      </a>
      <ul class="nav-list" [ngClass]="{'nav-hide': isHide, 'nav-active': !isHide}">
-       <li><a routerLink="/home">Trang chủ</a></li>
-       <li><a routerLink="/account/membership">Dịch vụ</a></li>
-       <li><a routerLink="/home">Cộng đồng</a></li>
+       <li><a routerLink="/">Trang chủ</a></li>
+       <li><a routerLink="/">Sản phẩm</a></li>
+       <li><a routerLink="/">Blog</a></li>
+       <li><a routerLink="/">Sale</a></li>
        <ng-container *ngIf="user; else elseTemplate">
          <li class="nav-item" nz-button nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomRight">
            {{ user.preferred_username }} <i class="ml-2" nz-icon nzType="down" nzTheme="outline"></i></li>
@@ -16,7 +18,6 @@
                  <i class="mr-3" nz-icon nzType="logout" nzTheme="outline"></i>Đăng xuất</a></li>
            </ul>
          </nz-dropdown-menu>
-
        </ng-container>
        <ng-template #elseTemplate>
          <li class=" nav-link"><a routerLink="/auth/login">Đăng nhập</a></li>
@@ -29,3 +30,19 @@
      </div>
    </div>
  </nav>
+ <div>
+   <nz-carousel nzAutoPlay nzAutoPlaySpeed="2000">
+     <div nz-carousel-content *ngFor="let content of contents"
+       [ngStyle]="{'background-image': content.image, 'text-align': content.align}">
+       <div>
+         <h3>{{ content.title }}</h3>
+         <p>{{ content.pragragraph}}</p>
+       </div>
+     </div>
+   </nz-carousel>
+ </div>
+ <!-- product list -->
+ <div class="mt-5">
+   <product-card></product-card>
+ </div>
+ <!-- /product list -->
