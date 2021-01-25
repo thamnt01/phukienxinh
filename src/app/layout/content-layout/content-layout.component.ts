@@ -28,6 +28,23 @@ export class ContentLayoutComponent {
       align: 'right'
     },
   ];
+  topics = [
+    {
+      img: '/assets/images/img3.jpg',
+      title: 'Một chiều thu',
+      content: 'Mùa thu và nỗi nhớ'
+    },
+    {
+      img: '/assets/images/img2.jpg',
+      title: 'Một chiều thu',
+      content: 'Mùa thu và nỗi nhớ'
+    },
+    {
+      img: '/assets/images/img1.jpg',
+      title: 'Một chiều thu',
+      content: 'Mùa thu và nỗi nhớ'
+    },
+  ];
   constructor() { }
 
 

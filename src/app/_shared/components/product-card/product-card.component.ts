@@ -45,11 +45,11 @@ export class ProductCardComponent implements OnInit {
       ]
     },
     {
-      title: 'Mẫu mới nhất',
-      textLead: 'Nàng không thể bỏ lỡ',
+      title: 'Được quan tâm nhất',
+      textLead: 'Những item được yêu thích nhất trong tuần',
       cards: [
         {
-          image: '/assets/images/ring1.jpg',
+          image: '/assets/images/neck-lace.jpeg',
           imageHover: '/assets/images/ring4.jpg',
           name: 'Sun Flower',
           code: 'SF',
@@ -57,7 +57,7 @@ export class ProductCardComponent implements OnInit {
           link: '/',
         },
         {
-          image: '/assets/images/ring2.jpg',
+          image: '/assets/images/scarf1.jpg',
           imageHover: '/assets/images/ring4.jpg',
           name: 'Sun Flower',
           code: 'SF',
@@ -65,7 +65,7 @@ export class ProductCardComponent implements OnInit {
           link: '/',
         },
         {
-          image: '/assets/images/ring3.jpg',
+          image: '/assets/images/scarf2.jpg',
           imageHover: '/assets/images/ring4.jpg',
           name: 'Sun Flower',
           code: 'SF',
@@ -73,7 +73,7 @@ export class ProductCardComponent implements OnInit {
           link: '/',
         },
         {
-          image: '/assets/images/ring1.jpg',
+          image: '/assets/images/neck-lace2.jpg',
           imageHover: '/assets/images/ring4.jpg',
           name: 'Sun Flower',
           code: 'SF',
