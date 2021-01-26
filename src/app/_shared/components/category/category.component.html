@@ -1,0 +1,22 @@
+<div>
+  <div class="mb-5">
+    <h3>Sắp xếp theo</h3>
+    <nz-radio-group [(ngModel)]="radioValue">
+      <label nz-radio nzValue="A">Giá: Tăng dần</label>
+      <label nz-radio nzValue="B">Giá: Giảm dần</label>
+    </nz-radio-group>
+  </div>
+  <div class="mb-5">
+    <h3>Danh mục</h3>
+    <div class="item" *ngFor="let option of options">
+      <a href="">
+        <div class="d-flex justify-content-between">
+          <span>{{ option.type }}</span><i class="py-1" nz-icon nzType="right" nzTheme="outline"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="d-none d-md-block">
+    <img src="/assets/images/ring4.jpg" alt="" style="height: 500px; width: 100%; object-fit: cover;">
+  </div>
+</div>

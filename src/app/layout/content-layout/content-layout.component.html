@@ -1,120 +1,100 @@
- <nav class="navbar">
-   <div class="container nav">
-     <a routerLink="/content-layout" class="d-flex logo">
-       <img src="/assets/images/logonotext.png" alt="logo">
-       <h2>Phụ kiện xinh</h2>
-     </a>
-     <ul class="nav-list" [ngClass]="{'nav-hide': isHide, 'nav-active': !isHide}">
-       <li><a routerLink="/">Trang chủ</a></li>
-       <li><a routerLink="/">Sản phẩm</a></li>
-       <li><a routerLink="/">Blog</a></li>
-       <li><a routerLink="/">Sale</a></li>
-       <ng-container *ngIf="user; else elseTemplate">
-         <li class="nav-item" nz-button nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomRight">
-           {{ user.preferred_username }} <i class="ml-2" nz-icon nzType="down" nzTheme="outline"></i></li>
-         <nz-dropdown-menu #menu="nzDropdownMenu">
-           <ul nz-menu>
-             <li nz-menu-item><a routerLink="/authentication/logout" [state]="{ local: true }">
-                 <i class="mr-3" nz-icon nzType="logout" nzTheme="outline"></i>Đăng xuất</a></li>
-           </ul>
-         </nz-dropdown-menu>
-       </ng-container>
-       <ng-template #elseTemplate>
-         <li class=" nav-link"><a routerLink="/auth/login">Đăng nhập</a></li>
-       </ng-template>
-     </ul>
-     <div class="burger" (click)="isHide = !isHide">
-       <div class="line1"></div>
-       <div class="line2"></div>
-       <div class="line3"></div>
-     </div>
-   </div>
- </nav>
- <div>
-   <nz-carousel nzAutoPlay nzAutoPlaySpeed="2000">
-     <div nz-carousel-content *ngFor="let content of contents"
-       [ngStyle]="{'background-image': content.image, 'text-align': content.align}">
-       <div>
-         <h3>{{ content.title }}</h3>
-         <p>{{ content.pragragraph}}</p>
-       </div>
-     </div>
-   </nz-carousel>
- </div>
- <!-- product list -->
- <div class="container">
-   <div class="mt-5">
-     <product-card></product-card>
-   </div>
-   <!-- /product list -->
-   <div class="home-blog">
-     <div class="text-center my-5">
-       <h2> Góc chúng mình </h2>
-       <p>Tâm sự cùng Phụ kiện xinh</p>
-     </div>
-     <div class="row">
-       <div class="d-none d-lg-inline col-8">
-         <div class="main-topic">
-           <img src="/assets/images/img1.jpg" alt="">
-         </div>
-       </div>
-       <div class="col-12 col-lg-4">
-         <div class="topic">
-           <div class="card row mb-3" *ngFor="let topic of topics">
-             <div class="col-5 thumb">
-               <div class="px-3">
-                 <img src="{{ topic.img }}" alt="">
-               </div>
-             </div>
-             <div class="col-7">
-               <div class="py-1">
-                 <h3 class="font-italic">{{ topic.title }}</h3>
-                 <p>{{ topic.content }}</p>
-                 <p class="date">24/03/2021</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div class="text-right px-4">
-           <a href="">Xem thêm</a>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
- <div class="footer mt-5">
-   <div class="container py-5">
-     <div class="row">
-       <div class="col-4 info">
-         <h4>Gọi hỗ trợ mua hàng</h4>
-         <p><i class="align-middle" nzRotate="180" nz-icon nzType="phone" nzTheme="outline"></i> 0242757577</p>
-         <div class="logo">
-           <img src="assets/images/logonotext.png" alt="">
-         </div>
-       </div>
-       <div class="col-4 rules">
-         <h4>Chính sách</h4>
-         <ul>
-           <a href="">
-             <li>Chính sách đổi trả</li>
-           </a>
-           <a href="">
-             <li>Khách hàng thân thiết</li>
-           </a>
-           <a href="">
-             <li>Chiết khấu cộng tác viên</li>
-           </a>
-         </ul>
-       </div>
-       <div class="col-4 channel">
-         <h4>Liên hệ với chúng tôi</h4>
-         <div class="d-flex">
-           <a href=""> <img src="/assets/images/fb.png" alt=""></a>
-           <a href=""> <img src="/assets/images/insta.jpg" alt=""></a>
-           <a href=""> <img src="/assets/images/shopee.jpeg" alt=""></a>
-           <a href=""> <img src="/assets/images/gmail.png" alt=""></a>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+<div class="content-layout">
+  <nav class="navbar">
+    <div class="container nav">
+      <a routerLink="/content-layout" class="d-flex logo">
+        <img src="/assets/images/logonotext.png" alt="logo">
+        <h2>Phụ kiện xinh</h2>
+      </a>
+      <ul class="nav-list" [ngClass]="{'nav-hide': isHide, 'nav-active': !isHide}">
+        <li><a routerLink="/">Trang chủ</a></li>
+        <li>
+          <div nz-dropdown [nzDropdownMenu]="menu">Sản phẩm</div>
+        </li>
+        <li><a routerLink="/">Blog</a></li>
+        <li><a routerLink="/">Sale</a></li>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu class="p-3">
+            <a routerLink="/ring">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Nhẫn</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Dây chuyền</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Khuyên tai</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Lắc tay, chân</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Phụ kiện quần áo</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Móng</li>
+            </a>
+          </ul>
+        </nz-dropdown-menu>
+        <ng-container *ngIf="user; else elseTemplate">
+          <li class="nav-item" nz-button nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomRight">
+            {{ user.preferred_username }} <i class="ml-2" nz-icon nzType="down" nzTheme="outline"></i></li>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item><a routerLink="/authentication/logout" [state]="{ local: true }">
+                  <i class="mr-3" nz-icon nzType="logout" nzTheme="outline"></i>Đăng xuất</a></li>
+            </ul>
+          </nz-dropdown-menu>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <li class=" nav-link"><a routerLink="/auth/login">Đăng nhập</a></li>
+        </ng-template>
+      </ul>
+      <div class="burger" (click)="isHide = !isHide">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="footer mt-5">
+    <div class="container py-5">
+      <div class="row  px-3 px-md-0">
+        <div class="col-6 col-md-4  info">
+          <h4>Gọi hỗ trợ mua hàng</h4>
+          <p><i class="align-middle" nzRotate="180" nz-icon nzType="phone" nzTheme="outline"></i> 0242757577</p>
+          <div class="logo">
+            <img src="assets/images/logonotext.png" alt="">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 rules">
+          <h4>Chính sách</h4>
+          <ul>
+            <a href="">
+              <li>Chính sách đổi trả</li>
+            </a>
+            <a href="">
+              <li>Khách hàng thân thiết</li>
+            </a>
+            <a href="">
+              <li>Chiết khấu cộng tác viên</li>
+            </a>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4  channel">
+          <h4>Liên hệ với chúng tôi</h4>
+          <div class="d-flex">
+            <a href=""> <img src="/assets/images/fb.png" alt=""></a>
+            <a href=""> <img src="/assets/images/insta.jpg" alt=""></a>
+            <a href=""> <img src="/assets/images/shopee.jpeg" alt=""></a>
+            <a href=""> <img src="/assets/images/gmail.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

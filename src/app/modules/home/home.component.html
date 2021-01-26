@@ -1,0 +1,75 @@
+ <div>
+   <nz-carousel nzAutoPlay nzAutoPlaySpeed="3000">
+     <div nz-carousel-content *ngFor="let content of contents"
+       [ngStyle]="{'background-image': content.image, 'text-align': content.align}">
+       <div>
+         <h3>{{ content.title }}</h3>
+         <p>{{ content.pragragraph}}</p>
+       </div>
+     </div>
+   </nz-carousel>
+ </div>
+ <!-- product list -->
+ <div class="container">
+   <div class="mt-5">
+     <div *ngFor="let item of items">
+       <div class="text-center mb-5">
+         <h2> {{item.title}} </h2>
+         <p>{{ item.textLead }}</p>
+       </div>
+       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+         <div class="col">
+           <product-card></product-card>
+         </div>
+         <div class="col">
+           <product-card></product-card>
+         </div>
+         <div class="col">
+           <product-card></product-card>
+         </div>
+         <div class="col">
+           <product-card></product-card>
+         </div>
+       </div>
+       <div class="text-center my-5">
+         <a class="text-black-50" href="">Xem thêm sản phẩm khác</a>
+       </div>
+       <hr class="mb-5">
+     </div>
+   </div>
+   <!-- /product list -->
+   <div class="home-blog">
+     <div class="text-center my-5">
+       <h2> Góc chúng mình </h2>
+       <p>Tâm sự cùng Phụ kiện xinh</p>
+     </div>
+     <div class="row">
+       <div class="d-none d-lg-inline col-8">
+         <div class="main-topic">
+           <img src="/assets/images/img1.jpg" alt="">
+         </div>
+       </div>
+       <div class="col-12 col-lg-4">
+         <div class="topic">
+           <div class="card row mb-3" *ngFor="let topic of topics">
+             <div class="col-5 thumb">
+               <div class="px-3">
+                 <img src="{{ topic.img }}" alt="">
+               </div>
+             </div>
+             <div class="col-7">
+               <div class="py-1">
+                 <h3 class="font-italic">{{ topic.title }}</h3>
+                 <p>{{ topic.content }}</p>
+                 <p class="date">24/03/2021</p>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="text-right px-4">
+           <a href="">Xem thêm</a>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
