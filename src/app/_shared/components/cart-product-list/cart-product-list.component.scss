@@ -8,9 +8,11 @@
     font-weight: 500;
   }
 }
+
 .payment-button {
   margin-top: 24px;
   text-align: right;
+
   button {
     background-color: #f26981;
     color: white;
@@ -18,4 +20,17 @@
     border-radius: 4px;
     padding: 6px 12px;
   }
+}
+
+@media (max-width: 767.98px) {
+  ::ng-deep .ant-table-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+}
+
+::ng-deep .ant-table-fixed {
+  table-layout: auto !important;
 }

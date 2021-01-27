@@ -27,8 +27,8 @@
     <hr class="mb-5">
   </div> -->
 
-  <nz-modal nzWidth='960px' [(nzVisible)]="isVisible" nzTitle="Thêm vào giỏ hàng" (nzOnCancel)="handleCancel()"
-    (nzOnOk)="handleOk()">
+  <nz-modal [nzStyle]="{ top: '40px' }" nzWidth='960px' [(nzVisible)]="isVisible" nzTitle="Thêm vào giỏ hàng"
+    (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
     <ng-container *nzModalContent>
       <div class="row">
         <div class="col-12 col-md-8">
@@ -71,8 +71,8 @@
     </ng-container>
   </nz-modal>
 
-  <nz-modal nzWidth='960px' [(nzVisible)]="isDisplay" nzTitle="Danh sách sản phẩm" (nzOnCancel)="handleAnotherCancel()"
-    (nzOnOk)="handleAnotherOk()">
+  <nz-modal [nzStyle]="{ top: '40px' }" nzWidth='960px' [(nzVisible)]="isDisplay" nzTitle="Danh sách sản phẩm"
+    (nzOnCancel)="handleAnotherCancel()" (nzOnOk)="handleAnotherOk()">
     <ng-container *nzModalContent>
       <cart-product-list></cart-product-list>
     </ng-container>
