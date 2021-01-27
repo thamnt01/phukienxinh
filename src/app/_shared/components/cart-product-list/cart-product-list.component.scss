@@ -1,0 +1,21 @@
+.price {
+  margin-top: 24px;
+  text-align: right;
+
+  span {
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.payment-button {
+  margin-top: 24px;
+  text-align: right;
+  button {
+    background-color: #f26981;
+    color: white;
+    border: 0 solid;
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+}

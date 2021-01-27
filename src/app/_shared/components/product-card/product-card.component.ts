@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCardComponent {
   isVisible = false;
+  isDisplay = false;
+  images = [
+    {
+      thumb: '/assets/images/ring1.jpg',
+      full: '/assets/images/carousel1.jpg'
+    }
+  ]
 
   items = [
 
@@ -62,15 +69,25 @@ export class ProductCardComponent {
   showModal(): void {
     this.isVisible = true;
   }
+  showAnotherModal(): void {
+    this.isDisplay = true;
+  }
 
   handleOk(): void {
     console.log('Button ok clicked!');
     this.isVisible = false;
+  }
+  handleAnotherOk(): void {
+    console.log('Button ok clicked!');
+    this.isDisplay = false;
   }
 
   handleCancel(): void {
     console.log('Button cancel clicked!');
     this.isVisible = false;
   }
-
+  handleAnotherCancel(): void {
+    console.log('Button cancel clicked!');
+    this.isDisplay = false;
+  }
 }

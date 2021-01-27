@@ -6,24 +6,28 @@ import { ProductOptionComponent } from './product-option/product-option.componen
 import { ZorroAntdModule } from '../zorro-antd.module';
 import { CategoryComponent } from './category/category.component';
 import { FormsModule } from '@angular/forms';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { CartProductListComponent } from './cart-product-list/cart-product-list.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     ZorroAntdModule,
-    FormsModule
+    FormsModule,
+    NgxImageZoomModule
   ],
   exports: [
     ProductCardComponent,
     ProductOptionComponent,
-    CategoryComponent
+    CategoryComponent,
+    CartProductListComponent
   ],
   declarations: [
     ProductCardComponent,
     ProductOptionComponent,
-    CategoryComponent
-
+    CategoryComponent,
+    CartProductListComponent
   ]
 })
 export class ShareComponentsModule { }
