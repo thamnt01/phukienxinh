@@ -14,17 +14,26 @@
         <li><a routerLink="/">Sale</a></li>
         <nz-dropdown-menu #menu="nzDropdownMenu">
           <ul nz-menu class="p-3">
-            <a routerLink="/ring">
-              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Nhẫn</li>
-            </a>
             <a href="">
-              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Dây chuyền</li>
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Phụ kiện tóc</li>
             </a>
             <a href="">
               <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Khuyên tai</li>
             </a>
             <a href="">
-              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Lắc tay, chân</li>
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Mũ</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Kính</li>
+            </a>
+            <a routerLink="/ring">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Nhẫn</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Vòng tay</li>
+            </a>
+            <a href="">
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Vòng cổ, khăn</li>
             </a>
             <a href="">
               <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Phụ kiện quần áo</li>
@@ -33,13 +42,7 @@
               <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Móng</li>
             </a>
             <a href="">
-              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Kính</li>
-            </a>
-            <a href="">
-              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Mũ</li>
-            </a>
-            <a href="">
-              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Tất</li>
+              <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Móc khóa</li>
             </a>
             <a href="">
               <li nz-menu-item><i nz-icon nzType="caret-right" nzTheme="outline"></i>Đồ lót</li>
@@ -59,6 +62,7 @@
         <ng-template #elseTemplate>
           <li class=" nav-link"><a routerLink="/auth/login">Đăng nhập</a></li>
         </ng-template>
+        <li class="cart"><a routerLink="/cart"><i nz-icon nzType="shopping-cart" nzTheme="outline"></i></a></li>
       </ul>
       <div class="burger" (click)="isHide = !isHide">
         <div class="line1"></div>

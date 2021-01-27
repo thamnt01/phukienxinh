@@ -15,7 +15,17 @@ const routes: Routes = [
       {
         path: 'ring',
         loadChildren: () =>
-          import('./modules/ring/ring.module').then(m => m.RingModule)
+          import('./modules/products/ring/ring.module').then(m => m.RingModule)
+      },
+      {
+        path: 'cart',
+        loadChildren: () =>
+          import('./modules/cart/cart.module').then(m => m.CartModule)
+      },
+      {
+        path: 'payment',
+        loadChildren: () =>
+          import('./modules/payment/payment.module').then(m => m.PaymentModule)
       },
     ]
   },
