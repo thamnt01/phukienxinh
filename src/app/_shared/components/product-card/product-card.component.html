@@ -75,5 +75,8 @@
     (nzOnCancel)="handleAnotherCancel()" (nzOnOk)="handleAnotherOk()">
     <ng-container *nzModalContent>
       <cart-product-list></cart-product-list>
+      <div class="payment-button">
+        <a routerLink="/payment"><button>Thanh toán</button></a>
+      </div>
     </ng-container>
   </nz-modal>
