@@ -10,26 +10,49 @@ export class CategoryComponent implements OnInit {
 
   options = [
     {
-      link: '/ring',
-      type: 'Nhẫn'
+      link: '/hair-accessories',
+      title: 'Phụ kiện tóc'
+    },
+    {
+      link: '/earring',
+      title: 'Khuyên tai'
+    },
+    {
+      link: '/hat',
+      title: 'Mũ'
+    },
+    {
+      link: '/glasses',
+      title: 'Kính'
     },
     {
       link: '/ring',
-      type: 'Khăn'
+      title: 'Nhẫn'
     },
     {
-      link: '/ring',
-      type: 'Phụ kiện quần áo'
+      link: '/bracelet',
+      title: 'Vòng tay, lắc chân'
     },
     {
-      link: '/ring',
-      type: 'Phụ kiện tóc'
+      link: '/necklace',
+      title: 'Vòng cổ, khăn'
     },
     {
-      link: '/ring',
-      type: 'Hàng sale'
+      link: '/clothing-accessories',
+      title: 'Phụ kiện quần áo'
     },
-
+    {
+      link: '/nail',
+      title: 'Móng'
+    },
+    {
+      link: '/underwear',
+      title: 'Đồ lót'
+    },
+    {
+      link: '/other',
+      title: 'Khác'
+    },
   ]
   constructor() { }
 

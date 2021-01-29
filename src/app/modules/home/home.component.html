@@ -14,7 +14,7 @@
    <div class="mt-5">
      <div *ngFor="let item of items">
        <div class="text-center mb-5">
-         <h2> {{item.title}} </h2>
+         <h2 class="mt-100"> {{item.title}} </h2>
          <p>{{ item.textLead }}</p>
        </div>
        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
@@ -32,15 +32,15 @@
          </div>
        </div>
        <div class="text-center my-5">
-         <a class="text-black-50" href="">Xem thêm sản phẩm khác</a>
+         <a class="text-black-50" routerLink="/ring">Xem thêm sản phẩm khác</a>
        </div>
-       <hr class="mb-5">
+       <nz-divider></nz-divider>
      </div>
    </div>
    <!-- /product list -->
    <div class="home-blog">
      <div class="text-center my-5">
-       <h2> Góc chúng mình </h2>
+       <h2 class="mt-100"> Góc chúng mình </h2>
        <p>Tâm sự cùng Phụ kiện xinh</p>
      </div>
      <div class="row">

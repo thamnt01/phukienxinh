@@ -1,85 +1,90 @@
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 
-  .card {
-    background: white;
-    text-decoration: none;
-    color: #444;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+  h2 {
+    font-weight: 300;
+    font-size: 16px;
+    margin: 16px 0 8px 0;
+    color: #333;
+  }
 
-    h2 {
-      font-weight: 300;
-      font-size: 16px;
-      margin: 16px 0 8px 0;
-      color: #333;
-    }
+  p {
+    font-weight: 500;
+  }
 
-    p {
-      font-weight: 500;
-    }
+  .thumb {
+    background-size: cover;
+    background-position: center center;
 
-    .thumb {
-      background-size: cover;
-      background-position: center center;
+    div {
+      width: 100%;
+      height: 260px;
 
-      div {
+      img {
         width: 100%;
-        height: 260px;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
+        height: 100%;
+        object-fit: cover;
       }
-    }
 
-    button {
-
-      background-color: #e2e2e2;
-      border: 0 solid;
-      color: black;
-      font-size: 16px;
-      font-weight: 500;
-      padding: 8px 16px;
-      margin: 16px 0;
-
-      // i {
-      //   color: #f26981;
-      // }
-
-      // .font-size-18 {
-      //   font-size: 24px;
-      //   vertical-align: middle;
-      // }
     }
   }
+
+  button {
+
+    background-color: #e2e2e2;
+    border: 0 solid;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin: 16px 0;
+
+    // i {
+    //   color: #f26981;
+    // }
+
+    // .font-size-18 {
+    //   font-size: 24px;
+    //   vertical-align: middle;
+    // }
+  }
+}
+
 .img {
   img {
     object-fit: contain;
   }
 }
+
 .main-img {
   width: 100%;
 }
+
 ::ng-deep {
   .ngxImageZoomContainer {
-  width: 100%!important;
-  height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
   }
+
   .ngxImageZoomFullContainer {
     width: 100% !important;
     height: 100% !important;
   }
+
   .ngxImageZoomThumbnail {
     width: 100%;
-    object-fit: contain!important;
+    object-fit: contain !important;
   }
+
   .ngxImageZoomFull {
     width: 100%;
-        object-fit: cover!important;
+    object-fit: cover !important;
   }
 }
 
@@ -87,11 +92,17 @@
   margin-top: 24px;
   text-align: right;
 
-  button {
-    background-color: #f26981;
-    color: white;
-    border: 0 solid;
-    border-radius: 4px;
-    padding: 6px 12px;
-  }
+}
+
+button {
+  background-color: #f26981;
+  color: white;
+  border: 0 solid;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.btn-secondary {
+  background-color: #e2e2e2;
+  color: rgb(43, 41, 41);
 }
