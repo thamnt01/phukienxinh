@@ -1,4 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
+import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 
 const routes: Routes = [
@@ -84,6 +85,22 @@ const routes: Routes = [
       },
     ]
   },
+  {
+    path: '',
+    component: AuthLayoutComponent,
+    children: [
+      {
+        path: 'login',
+        loadChildren: () =>
+          import('./modules/auth/login/login.module').then(m => m.LoginModule)
+      },
+      {
+        path: 'sign-up',
+        loadChildren: () =>
+          import('./modules/auth/sign-up/sign-up.module').then(m => m.SignUpModule)
+      },
+    ]
+  }
 ];
 
 export const AppRoutes = RouterModule.forRoot(routes);

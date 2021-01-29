@@ -24,7 +24,7 @@
 
     div {
       width: 100%;
-      height: 260px;
+      height: 220px;
 
       img {
         width: 100%;
@@ -105,4 +105,20 @@ button {
 .btn-secondary {
   background-color: #e2e2e2;
   color: rgb(43, 41, 41);
+}
+
+.circle-select {
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+  }
+}
+
+.img-option.active {
+  padding: 3px;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }

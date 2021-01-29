@@ -11,13 +11,15 @@ import en from '@angular/common/locales/en';
 import { AppRoutes } from './app.routing';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 import { SharedModule } from './_shared/shared.module';
+import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    AuthLayoutComponent
   ],
   imports: [
     BrowserModule,
