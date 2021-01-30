@@ -18,19 +18,19 @@ export class HomeComponent implements OnInit {
   ]
   contents = [
     {
-      image: 'url(/assets/images/carousel1.jpg)',
+      image: 'url(/assets/images/img1.jpg)',
       title: 'Ngập tràn ưu đãi',
       pragragraph: 'Thả thính tình yêu',
       align: 'left'
     },
     {
-      image: 'url(/assets/images/carousel2.jpg)',
+      image: 'url(/assets/images/img4.jpg)',
       title: 'Ngập tràn ưu đãi',
       pragragraph: 'Thả thính tình yêu',
       align: 'center'
     },
     {
-      image: 'url(/assets/images/carousel3.jpg)',
+      image: 'url(/assets/images/img5.jpg)',
       title: 'Ngập tràn ưu đãi',
       pragragraph: 'Thả thính tình yêu',
       align: 'right'

@@ -18,7 +18,7 @@
       </td>
       <td>{{ data.productPrice }}</td>
       <td>
-        <nz-input-number style="width: 60px"></nz-input-number>
+        <nz-input-number [nzMin]="1" style="width: 60px"></nz-input-number>
       </td>
       <td>{{ data.totalPrice }}</td>
       <td class="text-center text-danger"><i nz-icon nzType="delete" nzTheme="outline"></i></td>

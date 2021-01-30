@@ -62,8 +62,11 @@ export class ProductCardComponent {
     console.log('Button cancel clicked!');
     this.isVisible = false;
   }
-  handleAnotherCancel(): void {
+  handleListCancel(): void {
     console.log('Button cancel clicked!');
     this.isDisplay = false;
+  }
+  addToCart(): void {
+    this.items
   }
 }
