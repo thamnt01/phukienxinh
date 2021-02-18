@@ -7,6 +7,7 @@ import { CategoryComponent } from './category/category.component';
 import { FormsModule } from '@angular/forms';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { CartProductListComponent } from './cart-product-list/cart-product-list.component';
+import { AddToCardComponent } from './add-to-card/add-to-card.component';
 
 @NgModule({
   imports: [
@@ -19,12 +20,14 @@ import { CartProductListComponent } from './cart-product-list/cart-product-list.
   exports: [
     ProductCardComponent,
     CategoryComponent,
-    CartProductListComponent
+    CartProductListComponent,
+    AddToCardComponent
   ],
   declarations: [
     ProductCardComponent,
     CategoryComponent,
-    CartProductListComponent
+    CartProductListComponent,
+    AddToCardComponent
   ]
 })
 export class ShareComponentsModule { }

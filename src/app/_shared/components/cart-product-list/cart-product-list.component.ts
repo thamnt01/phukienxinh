@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'cart-product-list',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-product-list.component.scss']
 })
 export class CartProductListComponent implements OnInit {
+  demoValue = 1;
   listOfData = [
     {
       image: '/assets/images/ring3.jpg',
@@ -37,9 +39,13 @@ export class CartProductListComponent implements OnInit {
     },
 
   ];
-  constructor() { }
+  constructor(private nzMessageService: NzMessageService) { }
 
   ngOnInit() {
   }
+  confirm(): void {
+    this.nzMessageService.info('Xóa thành công');
+  }
+
 
 }

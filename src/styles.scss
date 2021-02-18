@@ -13,3 +13,31 @@ html body {
 .top-space {
   margin-top: 80px;
 }
+
+@media only screen and (min-width: 768px) {
+  .modal-md {
+    width: 70% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-md {
+    width: 90% !important;
+  }
+}
+
+.pink-btn {
+  background-color: #f26981;
+  color: white;
+  border: 0 solid;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.btn-secondary {
+  background-color: #e2e2e2;
+  color: rgb(43, 41, 41);
+  border: 0 solid;
+  border-radius: 4px;
+  padding: 6px 12px;
+}

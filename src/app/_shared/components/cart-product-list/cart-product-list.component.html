@@ -18,10 +18,12 @@
       </td>
       <td>{{ data.productPrice }}</td>
       <td>
-        <nz-input-number [nzMin]="1" style="width: 60px"></nz-input-number>
+        <nz-input-number [(ngModel)]="demoValue" [nzMin]="1" [nzMax]="10" style="width: 60px"></nz-input-number>
       </td>
       <td>{{ data.totalPrice }}</td>
-      <td class="text-center text-danger"><i nz-icon nzType="delete" nzTheme="outline"></i></td>
+      <td class="text-center"><i class=" delete-btn" nz-icon nzType="delete" nzTheme="outline" nz-popconfirm
+          nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()" nzPopconfirmPlacement="top"
+          nz-button></i></td>
     </tr>
   </tbody>
 </nz-table>

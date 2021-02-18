@@ -1,7 +1,6 @@
 .price {
   margin-top: 24px;
   text-align: right;
-  padding-left: 16px;
 
   span {
     color: red;
@@ -21,4 +20,15 @@
 
 ::ng-deep .ant-table-fixed {
   table-layout: auto !important;
+}
+
+.delete-btn {
+  color: #dc3545;
+}
+
+.delete-btn:hover {
+  color: #dc3545;
+  background: #f1f1f1;
+  padding: 12px;
+  border-radius: 6px;
 }

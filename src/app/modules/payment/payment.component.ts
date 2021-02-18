@@ -9,10 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PaymentComponent implements OnInit {
   radioValue = 'A';
+  myForm: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      name: ['', [Validators.required]],
 
-
-
-  constructor() { }
+    })
+  }
 
   ngOnInit() { }
 

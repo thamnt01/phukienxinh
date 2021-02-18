@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { PaymentComponent } from './payment.component';
 import { SharedModule } from 'src/app/_shared/shared.module';
 import { PaymentRoutes } from './payment.routing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     PaymentRoutes,
     SharedModule,
-    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [PaymentComponent]
 })
