@@ -4,10 +4,11 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { RouterModule } from '@angular/router';
 import { ZorroAntdModule } from '../zorro-antd.module';
 import { CategoryComponent } from './category/category.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { CartProductListComponent } from './cart-product-list/cart-product-list.component';
 import { AddToCardComponent } from './add-to-card/add-to-card.component';
+import { DemoCartComponent } from './demo-cart/demo-cart.component';
 
 @NgModule({
   imports: [
@@ -15,19 +16,22 @@ import { AddToCardComponent } from './add-to-card/add-to-card.component';
     RouterModule,
     ZorroAntdModule,
     FormsModule,
-    NgxImageZoomModule
+    NgxImageZoomModule,
+    ReactiveFormsModule
   ],
   exports: [
     ProductCardComponent,
     CategoryComponent,
     CartProductListComponent,
-    AddToCardComponent
+    AddToCardComponent,
+    DemoCartComponent
   ],
   declarations: [
     ProductCardComponent,
     CategoryComponent,
     CartProductListComponent,
-    AddToCardComponent
+    AddToCardComponent,
+    DemoCartComponent
   ]
 })
 export class ShareComponentsModule { }

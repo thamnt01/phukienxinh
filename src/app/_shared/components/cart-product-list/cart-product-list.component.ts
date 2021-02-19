@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
@@ -7,6 +8,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
   styleUrls: ['./cart-product-list.component.scss']
 })
 export class CartProductListComponent implements OnInit {
+  amount = new FormControl(1, [Validators.required])
   demoValue = 1;
   listOfData = [
     {

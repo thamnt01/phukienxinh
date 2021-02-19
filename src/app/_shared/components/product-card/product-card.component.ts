@@ -15,7 +15,7 @@ export class ProductCardComponent {
       thumb: '/assets/images/ring1.jpg',
       full: '/assets/images/carousel1.jpg'
     }
-  ]
+  ];
 
   items = [
     {
@@ -36,7 +36,7 @@ export class ProductCardComponent {
   ];
   constructor(private modal: NzModalService) { }
   getActiveData(item: any) {
-    return item.children[item.activeIndex]
+    return item.children[item.activeIndex];
   }
   createModal(): void {
     this.modal.create({
@@ -48,28 +48,7 @@ export class ProductCardComponent {
   }
 
   showModal(): void {
-    this.createModal()
-  }
-  showAnotherModal(): void {
-    this.isDisplay = true;
-  }
-
-  handleOk(): void {
-    console.log('Button ok clicked!');
-    this.isVisible = false;
-  }
-  handleAnotherOk(): void {
-    console.log('Button ok clicked!');
-    this.isDisplay = false;
-  }
-
-  handleCancel(): void {
-    console.log('Button cancel clicked!');
-    this.isVisible = false;
-  }
-  handleListCancel(): void {
-    console.log('Button cancel clicked!');
-    this.isDisplay = false;
+    this.createModal();
   }
   addToCart(value): void {
 

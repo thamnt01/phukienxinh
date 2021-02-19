@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ZorroAntdModule } from './zorro-antd.module';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ShareComponentsModule } from './components/share-components.module';
@@ -10,7 +10,7 @@ import { ShareComponentsModule } from './components/share-components.module';
     CommonModule,
     FormsModule,
     ZorroAntdModule,
-    ShareComponentsModule
+    ShareComponentsModule,
   ],
 })
 export class SharedModule { }

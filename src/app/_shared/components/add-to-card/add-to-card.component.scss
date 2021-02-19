@@ -19,3 +19,10 @@
     object-fit: cover !important;
   }
 }
+
+.active {
+  padding: 3px;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
