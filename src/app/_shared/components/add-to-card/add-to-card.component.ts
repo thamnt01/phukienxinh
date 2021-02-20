@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
-import { CartProductListComponent } from '../cart-product-list/cart-product-list.component';
 import { DemoCartComponent } from '../demo-cart/demo-cart.component';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-add-to-card',
@@ -34,7 +34,8 @@ export class AddToCardComponent implements OnInit {
 
   constructor(
     private modalRef: NzModalRef,
-    private modal: NzModalService
+    private modal: NzModalService,
+    private cartService: CartService,
   ) { }
 
   ngOnInit() {
@@ -61,5 +62,7 @@ export class AddToCardComponent implements OnInit {
   handleCancel(): void {
     this.modalRef.destroy();
   }
-  addToCart() { }
+  addToCart(product) {
+    this.cartService.addToCart(product);
+  }
 }

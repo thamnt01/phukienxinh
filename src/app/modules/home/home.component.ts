@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       align: 'left'
     },
     {
-      image: 'url(/assets/images/img4.jpg)',
+      image: 'url(/assets/images/demo.jpg)',
       title: 'Ngập tràn ưu đãi',
       pragragraph: 'Thả thính tình yêu',
       align: 'center'

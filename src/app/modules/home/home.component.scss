@@ -3,9 +3,9 @@
 [nz-carousel-content] {
   text-align: center;
   // width: 100%;
-  height: 580px;
+  height: 680px;
   background: #f26981;
-  background-size: 100%;
+  background-size: cover;
   color: #fff;
   overflow: hidden;
   padding: 180px 100px 0 100px;
@@ -19,7 +19,7 @@
 
 @media only screen and (max-width: 767px) {
   [nz-carousel-content] {
-    max-height: 180px !important;
+    min-height: 100% !important;
     padding: 80px 20px 0 20px !important;
 
     h3 {
