@@ -17,7 +17,7 @@ import { DemoCartComponent } from './demo-cart/demo-cart.component';
     ZorroAntdModule,
     FormsModule,
     NgxImageZoomModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     ProductCardComponent,

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd/message';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'cart-product-list',
@@ -8,6 +9,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
   styleUrls: ['./cart-product-list.component.scss']
 })
 export class CartProductListComponent implements OnInit {
+  items = this.cartService.getItems()
   amount = new FormControl(1, [Validators.required])
   demoValue = 1;
   listOfData = [
@@ -41,13 +43,15 @@ export class CartProductListComponent implements OnInit {
     },
 
   ];
-  constructor(private nzMessageService: NzMessageService) { }
+  constructor(
+    private nzMessageService: NzMessageService,
+    private cartService: CartService
+  ) { }
 
   ngOnInit() {
   }
-  confirm(): void {
+  confirm(item): void {
+    this.items = this.items.filter(x => x !== item);
     this.nzMessageService.info('Xóa thành công');
   }
-
-
 }

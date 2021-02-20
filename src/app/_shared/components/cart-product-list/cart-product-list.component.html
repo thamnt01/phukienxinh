@@ -1,4 +1,4 @@
-<nz-table nzShowPagination="false" #basicTable [nzData]="listOfData">
+<nz-table nzShowPagination="false" #basicTable [nzData]="items">
   <thead>
     <tr>
       <th>Sản phẩm</th>
@@ -22,7 +22,7 @@
       </td>
       <td>{{ data.totalPrice }}</td>
       <td class="text-center"><i class=" delete-btn" nz-icon nzType="delete" nzTheme="outline" nz-popconfirm
-          nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()" nzPopconfirmPlacement="top"
+          nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm(data)" nzPopconfirmPlacement="top"
           nz-button></i></td>
     </tr>
   </tbody>

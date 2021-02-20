@@ -83,6 +83,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./modules/products/underwear/underwear.module').then(m => m.UnderwearModule)
       },
+      {
+        path: 'product-view',
+        loadChildren: () =>
+          import('./modules/product-view/product-view.module').then(m => m.ProductViewModule)
+      },
     ]
   },
   {

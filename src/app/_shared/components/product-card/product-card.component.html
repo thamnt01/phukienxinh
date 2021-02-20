@@ -1,22 +1,24 @@
 <!-- product cart -->
 <div class="d-flex">
-  <div class="card" *ngFor="let card of items">
-    <div class="thumb">
-      <div>
-        <img src="{{ getActiveData(card).image }}" alt="">
-      </div>
-    </div>
-    <div class="text-center">
-      <h2 class="text-center">{{ card.name }} - {{ getActiveData(card).code }}</h2>
-      <p>{{ card.price }}</p>
-      <div class="d-flex justify-content-center">
-        <div class="circle-select" *ngFor="let item of card.children; let i=index">
-          <img class="mx-2 img-option" [class.active]="i === card.activeIndex" (mouseover)="card.activeIndex = i"
-            src="{{ item.image }}" alt="">
+  <div class="card">
+    <a routerLink="/product-view">
+      <div class="thumb">
+        <div>
+          <img src="{{ getActiveData(items).image }}" alt="">
         </div>
       </div>
-      <button (click)="showModal()">Thêm vào giỏ hàng</button>
-    </div>
+      <div class="text-center">
+        <h2 class="text-center">{{ items.name }} - {{ getActiveData(items).code }}</h2>
+        <p>{{ items.price }}</p>
+        <div class="d-flex justify-content-center">
+          <div class="circle-select" *ngFor="let item of items.children; let i=index">
+            <img class="mx-2 img-option" [class.active]="i === items.activeIndex" (mouseover)="items.activeIndex = i"
+              src="{{ item.image }}" alt="">
+          </div>
+        </div>
+      </div>
+    </a>
+    <button (click)="showModal()">Thêm vào giỏ hàng</button>
   </div>
 </div>
 <!-- /product cart -->
