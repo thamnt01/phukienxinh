@@ -12,9 +12,9 @@ import { Injectable } from '@angular/core';
 export class CartService {
   constructor() { }
   addToCart(product): void {
-    localStorage.setItem('cart', product);
+    localStorage.setItem('cart', JSON.stringify(product));
   }
   getItems(): any {
-    return localStorage.getItem('cart');
+    let product = localStorage.getItem('cart');
   }
 }

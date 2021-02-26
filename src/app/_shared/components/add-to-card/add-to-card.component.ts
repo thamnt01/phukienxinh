@@ -62,7 +62,7 @@ export class AddToCardComponent implements OnInit {
   handleCancel(): void {
     this.modalRef.destroy();
   }
-  addToCart(product) {
-    this.cartService.addToCart(product);
+  addToCart(item) {
+    this.cartService.addToCart(item);
   }
 }
