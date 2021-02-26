@@ -11,7 +11,6 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
   products = [];
-  // items = [];
   constructor() {
     this.products = JSON.parse(localStorage.getItem('cart') || '[]');
   }
@@ -25,7 +24,7 @@ export class CartService {
   getProduct(): any {
     return [...this.products];
   }
-  deleteProduct(data) {
-    this.products = this.products.filter(x => x !== data)
+  deleteProduct(data): void {
+    this.products = this.products.filter(x => x !== data);
   }
 }
