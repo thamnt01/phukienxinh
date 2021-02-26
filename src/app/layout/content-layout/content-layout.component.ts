@@ -10,47 +10,47 @@ export class ContentLayoutComponent {
   user: any;
   products = [
     {
-      link: '/hair-accessories',
+      link: '/products',
       title: 'Phụ kiện tóc'
     },
     {
-      link: '/earring',
+      link: '/products',
       title: 'Khuyên tai'
     },
     {
-      link: '/hat',
+      link: '/products',
       title: 'Mũ'
     },
     {
-      link: '/glasses',
+      link: '/products',
       title: 'Kính'
     },
     {
-      link: '/ring',
+      link: '/products',
       title: 'Nhẫn'
     },
     {
-      link: '/bracelet',
+      link: '/products',
       title: 'Vòng tay, lắc chân'
     },
     {
-      link: '/necklace',
+      link: '/products',
       title: 'Vòng cổ, khăn'
     },
     {
-      link: '/clothing-accessories',
+      link: '/products',
       title: 'Phụ kiện quần áo'
     },
     {
-      link: '/nail',
+      link: '/products',
       title: 'Móng'
     },
     {
-      link: '/underwear',
+      link: '/products',
       title: 'Đồ lót'
     },
     {
-      link: '/other',
+      link: '/products',
       title: 'Khác'
     },
 

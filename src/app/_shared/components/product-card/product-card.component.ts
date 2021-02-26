@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { AddToCardComponent } from '../add-to-card/add-to-card.component';
 @Component({
@@ -7,6 +8,8 @@ import { AddToCardComponent } from '../add-to-card/add-to-card.component';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
+  @Input() data: any;
+  @Output() newItemEvent = new EventEmitter<string>();
   isVisible = false;
   isDisplay = false;
   index: number;
@@ -48,7 +51,7 @@ export class ProductCardComponent {
   showModal(): void {
     this.createModal();
   }
-  addToCart(value): void {
-
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
   }
 }

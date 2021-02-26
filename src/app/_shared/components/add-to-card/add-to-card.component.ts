@@ -63,6 +63,5 @@ export class AddToCardComponent implements OnInit {
   addToCart(product: any) {
     this.cartService.addToCart(product);
     this.modalRef.destroy()
-    debugger
   }
 }

@@ -29,59 +29,9 @@ const routes: Routes = [
           import('./modules/blog-topic/blog-topic.module').then(m => m.BlogTopicModule)
       },
       {
-        path: 'ring',
+        path: 'products',
         loadChildren: () =>
-          import('./modules/products/ring/ring.module').then(m => m.RingModule)
-      },
-      {
-        path: 'bracelet',
-        loadChildren: () =>
-          import('./modules/products/bracelet/bracelet.module').then(m => m.BraceletModule)
-      },
-      {
-        path: 'clothing-accessories',
-        loadChildren: () =>
-          import('./modules/products/clothing-accessories/clothing-accessories.module').then(m => m.ClothingAccessoriesModule)
-      },
-      {
-        path: 'erring',
-        loadChildren: () =>
-          import('./modules/products/earring/earring.module').then(m => m.EarringModule)
-      },
-      {
-        path: 'glasses',
-        loadChildren: () =>
-          import('./modules/products/glasses/glasses.module').then(m => m.GlassesModule)
-      },
-      {
-        path: 'hair-accessories',
-        loadChildren: () =>
-          import('./modules/products/hair-accessories/hair-accessories.module').then(m => m.HairAccessoriesModule)
-      },
-      {
-        path: 'hat',
-        loadChildren: () =>
-          import('./modules/products/hat/hat.module').then(m => m.HatModule)
-      },
-      {
-        path: 'nail',
-        loadChildren: () =>
-          import('./modules/products/nail/nail.module').then(m => m.NailModule)
-      },
-      {
-        path: 'necklace',
-        loadChildren: () =>
-          import('./modules/products/necklace/necklace.module').then(m => m.NecklaceModule)
-      },
-      {
-        path: 'other',
-        loadChildren: () =>
-          import('./modules/products/other/other.module').then(m => m.OtherModule)
-      },
-      {
-        path: 'underwear',
-        loadChildren: () =>
-          import('./modules/products/underwear/underwear.module').then(m => m.UnderwearModule)
+          import('./modules/products-site/products-site.module').then(m => m.ProductsSiteModule)
       },
       {
         path: 'product-view',
