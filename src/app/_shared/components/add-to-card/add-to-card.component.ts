@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
 import { DemoCartComponent } from '../demo-cart/demo-cart.component';
@@ -11,25 +11,23 @@ import { CartService } from '../services/cart.service';
 })
 export class AddToCardComponent implements OnInit {
   amount = new FormControl(1, [Validators.required])
-  items = [
-    {
-      name: 'Sun Flower',
-      price: '10,000đ',
-      activeIndex: 0,
-      children: [
-        {
-          image: '/assets/images/ring1.jpg',
-          code: 'SF',
-          type: 'Vàng',
-        },
-        {
-          image: '/assets/images/ring3.jpg',
-          code: 'ST',
-          type: 'Vàng',
-        }
-      ]
-    },
-  ];
+  item = {
+    name: 'Sun Flower',
+    price: '10,000đ',
+    activeIndex: 0,
+    children: [
+      {
+        image: '/assets/images/ring1.jpg',
+        code: 'SF',
+        type: 'Vàng',
+      },
+      {
+        image: '/assets/images/ring3.jpg',
+        code: 'ST',
+        type: 'Vàng',
+      }
+    ]
+  };
 
 
   constructor(
@@ -62,7 +60,9 @@ export class AddToCardComponent implements OnInit {
   handleCancel(): void {
     this.modalRef.destroy();
   }
-  addToCart(item) {
-    this.cartService.addToCart(item);
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+    this.modalRef.destroy()
+    debugger
   }
 }

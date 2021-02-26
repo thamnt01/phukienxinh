@@ -41,3 +41,19 @@ html body {
   border-radius: 4px;
   padding: 6px 12px;
 }
+
+.circle-select {
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+  }
+}
+
+.img-option.active {
+  padding: 3px;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}

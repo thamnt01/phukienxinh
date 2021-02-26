@@ -15,6 +15,7 @@
 
   p {
     font-weight: 500;
+    color: #333;
   }
 
   .thumb {
@@ -35,7 +36,6 @@
   }
 
   button {
-
     background-color: #e2e2e2;
     border: 0 solid;
     color: black;
@@ -43,6 +43,8 @@
     font-weight: 500;
     padding: 8px 16px;
     margin: 16px 0;
+    // width: 40%;
+    align-self: center;
   }
 }
 
@@ -60,20 +62,4 @@
   margin-top: 24px;
   text-align: right;
 
-}
-
-.circle-select {
-  img {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    position: relative;
-  }
-}
-
-.img-option.active {
-  padding: 3px;
-  border: 1px solid gray;
-  box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
 }

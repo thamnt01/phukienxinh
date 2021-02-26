@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NzModalRef } from 'ng-zorro-antd/modal';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-demo-cart',
@@ -8,12 +9,18 @@ import { NzModalRef } from 'ng-zorro-antd/modal';
 })
 export class DemoCartComponent implements OnInit {
 
-  constructor(private modal: NzModalRef) { }
+  constructor(
+    private modal: NzModalRef,
+    // private cartService: CartService,
+  ) { }
 
   ngOnInit() {
   }
   handleCancel() {
     this.modal.destroy()
   }
+  // getItem() {
+  //   this.cartService.getProduct()
+  // }
 
 }

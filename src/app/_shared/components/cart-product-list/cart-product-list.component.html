@@ -10,10 +10,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let data of basicTable.data">
+    <tr *ngFor="let data of listOfData">
       <td><img src="{{ data.image }}" alt="" width="80px"></td>
       <td>
-        <div>{{ data.name }}</div>
         <div>{{ data.type }}</div>
       </td>
       <td>{{ data.productPrice }}</td>
@@ -22,8 +21,8 @@
       </td>
       <td>{{ data.totalPrice }}</td>
       <td class="text-center"><i class=" delete-btn" nz-icon nzType="delete" nzTheme="outline" nz-popconfirm
-          nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()" nzPopconfirmPlacement="top"
-          nz-button></i></td>
+          nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="deleteProduct(data)"
+          nzPopconfirmPlacement="top" nz-button></i></td>
     </tr>
   </tbody>
 </nz-table>

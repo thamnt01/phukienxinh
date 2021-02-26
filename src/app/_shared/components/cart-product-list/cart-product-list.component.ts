@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd/message';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'cart-product-list',
@@ -10,44 +11,25 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 export class CartProductListComponent implements OnInit {
   amount = new FormControl(1, [Validators.required])
   demoValue = 1;
-  listOfData = [
-    {
-      image: '/assets/images/ring3.jpg',
-      name: 'Flower Ring',
-      type: 'vàng',
-      productPrice: '30,000đ',
-      totalPrice: '90,000đ'
-    },
-    {
-      image: '/assets/images/scarf1.jpg',
-      name: 'Flower Ring',
-      type: 'vàng',
-      productPrice: '30,000đ',
-      totalPrice: '90,000đ'
-    },
-    {
-      image: '/assets/images/neck-lace.jpeg',
-      name: 'Flower Ring',
-      type: 'vàng',
-      productPrice: '30,000đ',
-      totalPrice: '90,000đ'
-    },
-    {
-      image: '/assets/images/ring2.jpg',
-      name: 'Flower Ring',
-      type: 'vàng',
-      productPrice: '30,000đ',
-      totalPrice: '90,000đ'
-    },
-
-  ];
-  constructor(private nzMessageService: NzMessageService) { }
+  listOfData = [];
+  constructor(
+    private nzMessageService: NzMessageService,
+    private cartService: CartService
+  ) { }
 
   ngOnInit() {
+    this.getProduct()
   }
-  confirm(): void {
-    this.nzMessageService.info('Xóa thành công');
+  confirm(item): void {
+    // this.items = this.items.filter(x => x !== item);
+    // this.nzMessageService.info('Xóa thành công');
   }
-
-
+  getProduct() {
+    this.listOfData = this.cartService.getProduct();
+    console.log(this.listOfData)
+  }
+  deleteProduct(data) {
+    this.cartService.deleteProduct(data);
+    this.listOfData = this.cartService.getProduct();
+  }
 }

@@ -17,23 +17,21 @@ export class ProductCardComponent {
     }
   ];
 
-  items = [
-    {
-      name: 'Sun Flower',
-      price: '10,000đ',
-      activeIndex: 0,
-      children: [
-        {
-          image: '/assets/images/ring1.jpg',
-          code: 'SF',
-        },
-        {
-          image: '/assets/images/ring3.jpg',
-          code: 'ST',
-        }
-      ]
-    },
-  ];
+  items = {
+    name: 'Sun Flower',
+    price: '10,000đ',
+    activeIndex: 0,
+    children: [
+      {
+        image: '/assets/images/ring1.jpg',
+        code: 'SF',
+      },
+      {
+        image: '/assets/images/ring3.jpg',
+        code: 'ST',
+      }
+    ]
+  };
   constructor(private modal: NzModalService) { }
   getActiveData(item: any) {
     return item.children[item.activeIndex];

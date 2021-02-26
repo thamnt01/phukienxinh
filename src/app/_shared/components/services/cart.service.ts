@@ -10,11 +10,22 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-  constructor() { }
-  addToCart(product): void {
-    localStorage.setItem('cart', JSON.stringify(product));
+  products = [];
+  // items = [];
+  constructor() {
+    this.products = JSON.parse(localStorage.getItem('cart') || '[]');
   }
-  getItems(): any {
-    let product = localStorage.getItem('cart');
+
+  addToCart(product: any): void {
+    this.products.push(product);
+    localStorage.setItem('cart', JSON.stringify(this.products));
+
+  }
+
+  getProduct(): any {
+    return [...this.products];
+  }
+  deleteProduct(data) {
+    this.products = this.products.filter(x => x !== data)
   }
 }
