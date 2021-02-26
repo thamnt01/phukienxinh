@@ -18,7 +18,7 @@ export class CartProductListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getProduct()
+    this.getProduct();
   }
   confirm(item): void {
     // this.items = this.items.filter(x => x !== item);
@@ -26,7 +26,7 @@ export class CartProductListComponent implements OnInit {
   }
   getProduct() {
     this.listOfData = this.cartService.getProduct();
-    console.log(this.listOfData)
+    console.log(this.listOfData);
   }
   deleteProduct(data) {
     this.cartService.deleteProduct(data);
