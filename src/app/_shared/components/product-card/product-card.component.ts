@@ -9,7 +9,7 @@ import { AddToCardComponent } from '../add-to-card/add-to-card.component';
 })
 export class ProductCardComponent {
   @Input() data: any;
-  @Output() newItemEvent = new EventEmitter<string>();
+  // @Output() newItemEvent = new EventEmitter<string>();
   isVisible = false;
   isDisplay = false;
   index: number;
@@ -51,7 +51,7 @@ export class ProductCardComponent {
   showModal(): void {
     this.createModal();
   }
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
-  }
+  // addNewItem(value: string) {
+  //   this.newItemEvent.emit(value);
+  // }
 }

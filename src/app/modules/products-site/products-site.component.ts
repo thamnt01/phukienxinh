@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ProductsClient } from 'src/app/_shared/components/services/identity-api';
 
@@ -7,18 +8,23 @@ import { ProductsClient } from 'src/app/_shared/components/services/identity-api
   styleUrls: ['./products-site.component.scss']
 })
 export class ProductsSiteComponent implements OnInit {
+  private Url = "https://localhost:5001/api/Products";
   listOfData = [];
   productName = [];
   constructor(
-    private productsClient: ProductsClient,
+    private http: HttpClient,
+
   ) { }
 
   ngOnInit() {
     this.getData();
   }
   getData() {
-    this.productsClient.getAll().subscribe(result => {
-      this.listOfData = result.data;
-    });
+    this.http.get<any>(this.Url).subscribe(result => {
+      if (this.Url) {
+        this.listOfData = result.data;
+        console.log(this.listOfData)
+      }
+    })
   }
 }
