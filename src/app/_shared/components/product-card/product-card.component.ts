@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Output, EventEmitter } from '@angular/core';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { AddToCardComponent } from '../add-to-card/add-to-card.component';
 @Component({

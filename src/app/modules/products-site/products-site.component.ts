@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ProductsClient } from 'src/app/_shared/components/services/identity-api';
+import { ProductModelDto, ProductModelsClient } from 'src/app/_shared/components/services/identity-api';
 
 @Component({
   selector: 'app-products-site',
@@ -8,23 +7,17 @@ import { ProductsClient } from 'src/app/_shared/components/services/identity-api
   styleUrls: ['./products-site.component.scss']
 })
 export class ProductsSiteComponent implements OnInit {
-  private Url = 'https://localhost:5001/api/ProductModels';
-  listOfData = [];
-  productName = [];
+  listOfData: ProductModelDto[] = [];
   constructor(
-    private http: HttpClient,
-
+    private productModelsClient: ProductModelsClient
   ) { }
 
   ngOnInit() {
     this.getData();
   }
   getData() {
-    this.http.get<any>(this.Url).subscribe(result => {
-      if (this.Url) {
-        this.listOfData = result.data;
-        console.log(this.listOfData)
-      }
-    })
+    this.productModelsClient.getAll().subscribe(res => {
+      this.listOfData = res.data;
+    });
   }
 }

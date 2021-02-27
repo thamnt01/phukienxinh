@@ -4,8 +4,7 @@
     <a routerLink="/product-view">
       <div class="thumb">
         <div>
-          <img src="https://localhost:5001/api/files/DownloadFile/2b7576ee-e618-4fdd-b66b-05e40fe64bbf" alt=""
-            style="object-fit: contain;">
+          <img [src]="getActiveData(data).data.images[0] | fullUrl" alt="" style="object-fit: contain;">
         </div>
       </div>
       <div class="text-center">

@@ -12,6 +12,8 @@ import { AppRoutes } from './app.routing';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 import { SharedModule } from './_shared/shared.module';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
+import { API_BASE_URL } from './_shared/components/services/identity-api';
+import { environment } from 'src/environments/environment';
 
 registerLocaleData(en);
 
@@ -29,7 +31,10 @@ registerLocaleData(en);
     AppRoutes,
     SharedModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
+    { provide: API_BASE_URL, useValue: environment.apiUrl },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,6 +10,7 @@ import { CartProductListComponent } from './cart-product-list/cart-product-list.
 import { AddToCardComponent } from './add-to-card/add-to-card.component';
 import { DemoCartComponent } from './demo-cart/demo-cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipeModule } from '../pipe/pipe.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     NgxImageZoomModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PipeModule
   ],
   exports: [
     ProductCardComponent,
