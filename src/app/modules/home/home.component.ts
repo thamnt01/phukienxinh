@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
     this.http.get<any>(this.Url).subscribe(result => {
       if (this.Url) {
         this.listOfData = result.data;
-        console.log(this.listOfData)
+        console.log(this.listOfData);
       }
     })
   }

@@ -15,7 +15,9 @@ export class ProductCardComponent {
   constructor(private modal: NzModalService) { }
 
   getActiveData(item: any) {
+    // debugger
     return item.products[item.activeIndex || 0];
+    console.log(item.products)
   }
   createModal(): void {
     this.modal.create({
