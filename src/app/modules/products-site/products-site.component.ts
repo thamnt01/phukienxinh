@@ -8,7 +8,7 @@ import { ProductsClient } from 'src/app/_shared/components/services/identity-api
   styleUrls: ['./products-site.component.scss']
 })
 export class ProductsSiteComponent implements OnInit {
-  private Url = "https://localhost:5001/api/Products";
+  private Url = 'https://localhost:5001/api/ProductModels';
   listOfData = [];
   productName = [];
   constructor(

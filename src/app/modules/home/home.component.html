@@ -17,7 +17,11 @@
          <h2 class="mt-100"> {{item.title}} </h2>
          <p>{{ item.textLead }}</p>
        </div>
-       <product-card></product-card>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 px-md-6">
+         <div *ngFor="let child of listOfData">
+           <product-card [data]="child"></product-card>
+         </div>
+       </div>
        <div class="text-center my-5">
          <a class="text-black-50" routerLink="/ring">Xem thêm sản phẩm khác</a>
        </div>
@@ -25,6 +29,9 @@
      </div>
    </div>
    <!-- /product list -->
+   <div class="row decor-img">
+     <img src="/assets/images/summer.jpg" alt="">
+   </div>
    <div class="home-blog">
      <div class="text-center my-5">
        <h2 class="mt-100"> Góc chúng mình </h2>

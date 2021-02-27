@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,8 +15,12 @@ export class HomeComponent implements OnInit {
     {
       title: 'Sản phẩm mới nhất',
       textLead: 'Nàng không nên bỏ lỡ'
+    },
+    {
+      title: 'Gợi ý riêng cho nàng',
+      textLead: 'Nàng không nên bỏ lỡ'
     }
-  ]
+  ];
   contents = [
     {
       image: 'url(/assets/images/img1.jpg)',
@@ -53,9 +58,23 @@ export class HomeComponent implements OnInit {
       content: 'Mùa thu và nỗi nhớ'
     },
   ];
-  constructor() { }
+  private Url = 'https://localhost:5001/api/ProductModels';
+  listOfData = [];
+  productName = [];
+  constructor(
+    private http: HttpClient,
+  ) { }
 
   ngOnInit() {
+    this.getData();
+  }
+  getData() {
+    this.http.get<any>(this.Url).subscribe(result => {
+      if (this.Url) {
+        this.listOfData = result.data;
+        console.log(this.listOfData)
+      }
+    })
   }
 
 }

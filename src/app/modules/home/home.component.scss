@@ -75,3 +75,11 @@
 .mt-100 {
   margin-top: 100px;
 }
+
+.decor-img {
+  img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

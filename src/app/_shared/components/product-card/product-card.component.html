@@ -4,15 +4,16 @@
     <a routerLink="/product-view">
       <div class="thumb">
         <div>
-          <img src="{{ getActiveData(items).image }}" alt="">
+          <img src="https://localhost:5001/api/files/DownloadFile/2b7576ee-e618-4fdd-b66b-05e40fe64bbf" alt=""
+            style="object-fit: contain;">
         </div>
       </div>
       <div class="text-center">
-        <h2 class="text-center">{{ items.name }} - {{ getActiveData(items).code }}</h2>
-        <p>{{ items.price }}</p>
+        <h2 class="text-center">{{ data.data.name }}</h2>
+        <p>{{ data.data.price}}</p>
         <div class="d-flex justify-content-center">
-          <div class="circle-select" *ngFor="let item of items.children; let i=index">
-            <img class="mx-2 img-option" [class.active]="i === items.activeIndex" (mouseover)="items.activeIndex = i"
+          <div class="circle-select" *ngFor="let item of data.products; let i=index">
+            <img class="mx-2 img-option" [class.active]="i === data.activeIndex" (mouseover)="data.activeIndex = i"
               src="{{ item.image }}" alt="">
           </div>
         </div>

@@ -9,6 +9,7 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { CartProductListComponent } from './cart-product-list/cart-product-list.component';
 import { AddToCardComponent } from './add-to-card/add-to-card.component';
 import { DemoCartComponent } from './demo-cart/demo-cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { DemoCartComponent } from './demo-cart/demo-cart.component';
     FormsModule,
     NgxImageZoomModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     ProductCardComponent,
