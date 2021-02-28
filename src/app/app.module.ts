@@ -14,6 +14,7 @@ import { SharedModule } from './_shared/shared.module';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { API_BASE_URL } from './_shared/components/services/identity-api';
 import { environment } from 'src/environments/environment';
+import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 
 registerLocaleData(en);
 
@@ -28,6 +29,7 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ApiAuthorizationModule,
     AppRoutes,
     SharedModule
   ],

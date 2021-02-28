@@ -1,13 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
+import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: '',
     component: ContentLayoutComponent,
+    // canActivate: [AuthorizeGuard],
     children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
         path: 'home',
         loadChildren: () =>

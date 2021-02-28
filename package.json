@@ -23,6 +23,7 @@
     "bootstrap": "^5.0.0-beta1",
     "ng-zorro-antd": "^10.2.2",
     "ngx-image-zoom": "^0.6.0",
+    "oidc-client": "^1.11.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
